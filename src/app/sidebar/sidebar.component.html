@@ -20,7 +20,7 @@
      <!-- <div id="noConversation">
        All chats are archived
      </div> -->
-     <div class="conversation" *ngFor="let i of conversations">
+     <div class="conversation" *ngFor="let i of conversations" (click)="conversationClicked.emit(i)">
        <div class="picture"> <img src="../../assets/images/IMG_20200324_124627_878-min-min.jpg" alt="">
        </div>
        <div class="content">
