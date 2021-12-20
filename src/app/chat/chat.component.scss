@@ -47,5 +47,15 @@
     #micIcon {
       flex-basis: 50px;
     }
+    #micIcon,
+    #smileyIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 40%;
+        cursor: pointer;
+      }
+    }
   }
 }
