@@ -1,10 +1,12 @@
 <div id="container">
   <div id="header">
-    <div id="headerContent">
 
+  </div>
+  <div id="body">
+    <div class="message" *ngFor="let i of convo.messages">
+      {{i.body}}
     </div>
   </div>
-  <div id="body"></div>
   <div id="footer">
     <div id="smileyIcon">
       <img (click)="emojiPickerVisible = !emojiPickerVisible" src="../../assets/images/smileIcon.svg" />

@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChatComponent } from './chat/chat.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent, SidebarComponent, ChatComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, CommonModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
