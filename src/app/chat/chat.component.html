@@ -3,19 +3,23 @@
 
   </div>
   <div id="body">
-    <div class="message" *ngFor="let i of convo.messages">
-      {{i.body}}
+    <div class="message" [ngClass]="{me: i.me}" *ngFor="let i of convo.messages">
+      <div class="messageContent">
+        {{i.body}}
+        <div class="time">{{i.time}}</div>
+      </div>
     </div>
   </div>
   <div id="footer">
     <div id="smileyIcon">
-      <img (click)="emojiPickerVisible = !emojiPickerVisible" src="../../assets/images/smileIcon.svg" />
+      <img src="../../assets/images/smileIcon.svg" />
       <!-- <emoji-mart (emojiClick)="emojiClicked($event)" *ngIf="emojiPickerVisible"
         style="position: absolute; bottom: 50px" [darkMode]="false" title="Pick your emoji…" emoji="point_up">
       </emoji-mart> -->
     </div>
     <div id="textarea">
-      <!-- <textarea [(ngModel)]="message" (keyup.enter)="submitMessage($event)"></textarea> -->
+      <textarea (keyup.enter)="submitMessage($event)"></textarea>
+      <!-- [(ngModel)]="message"  -->
     </div>
     <div id="micIcon">
       <img src="../../assets/images/voiceIcon.svg" />

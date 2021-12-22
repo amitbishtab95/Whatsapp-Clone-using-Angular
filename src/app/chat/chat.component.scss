@@ -17,11 +17,40 @@
   #body {
     flex-grow: 1;
     // flex-basis: 67px;
-    background-color: royalblue;
+    display: flex;
+    flex-direction: column-reverse;
+    // background-color: royalblue;
+    padding: 20px 50px;
+    overflow: auto;
+    .message {
+      margin-top: 10px;
+      color: #767676;
+      font-size: 15px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      .messageContent {
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .time {
+        text-align: right;
+        color: #959698;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+      &.me {
+        align-items: flex-end;
+        .messageContent {
+          background-color: #dcf7c5;
+        }
+      }
+    }
   }
   #footer {
-    flex-basis: 67px;
-    background-color: #cf591e;
+    min-height: 67px;
+
     background-color: #f0eeed;
     display: flex;
     #smileyIcon {
@@ -37,7 +66,7 @@
         height: 45px;
         border: 0px;
         border-radius: 4px;
-        resize: none;
+        resize: none !important;
         outline: none;
         padding: 14px;
         font-family: sans-serif;
