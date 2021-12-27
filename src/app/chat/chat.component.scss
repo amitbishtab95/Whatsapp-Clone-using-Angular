@@ -12,6 +12,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .avatarSection {
+      display: flex;
+      .picture {
+        min-width: 40px;
+        max-width: 40px;
+        margin: 0 10px;
+        img {
+          max-width: 100%;
+          border-radius: 50%;
+        }
+      }
+      .nameSection {
+        flex-grow: 1;
+        padding-top: 4px;
+        color: #545454;
+      }
+    }
+    .sectionButtons {
+      min-width: 50px;
+      display: flex;
+      i {
+        margin-right: 15px;
+        cursor: pointer;
+      }
+    }
   }
 
   #body {

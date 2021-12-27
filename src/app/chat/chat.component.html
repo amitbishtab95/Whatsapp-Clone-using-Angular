@@ -1,6 +1,15 @@
 <div id="container">
   <div id="header">
-
+    <div class="avatarSection">
+      <div class="picture">
+        <img src="..\..\assets\images\IMG_20200324_124627_878-min-min.jpg" alt="">
+      </div>
+      <div class="nameSection">Rahul</div>
+    </div>
+    <div class="sectionButtons">
+      <i class="fas fa-paperclip"></i>
+      <i class="fas fa-ellipsis-v fa-1x"></i>
+    </div>
   </div>
   <div id="body">
     <div class="message" [ngClass]="{me: i.me}" *ngFor="let i of convo.messages">
