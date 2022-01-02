@@ -12,7 +12,7 @@
      </div>
      <div id="searchBox">
        <i class="fas fa-search"></i>
-       <input type="text" placeholder="Search or start new chat">
+       <input [(ngModel)]='searchText' type="text" placeholder="Search or start new chat">
      </div>
    </div>
 
@@ -20,7 +20,8 @@
      <!-- <div id="noConversation">
        All chats are archived
      </div> -->
-     <div class="conversation" *ngFor="let i of conversations" (click)="conversationClicked.emit(i)">
+     <div class="conversation" *ngFor="let i of !searchText?conversations:filteredConversations"
+       (click)="conversationClicked.emit(i)">
        <div class="picture"> <img src="../../assets/images/IMG_20200324_124627_878-min-min.jpg" alt="">
        </div>
        <div class="content">

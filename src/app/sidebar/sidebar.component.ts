@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   @Output() conversationClicked: EventEmitter<any> = new EventEmitter();
+  searchText: any;
   conversations = [
     {
       name: 'Marshall',
@@ -105,7 +106,18 @@ export class SidebarComponent implements OnInit {
       ],
     },
   ];
+  get filteredConversations() {
+    return this.conversations.filter((conversations) => {
+      return (
+        conversations.name
+          .toLowerCase()
+          .includes(this.searchText.toLowerCase()) ||
+        conversations.message
+          .toLowerCase()
+          .includes(this.searchText.toLowerCase())
+      );
+    });
+  }
   constructor() {}
-
   ngOnInit(): void {}
 }
